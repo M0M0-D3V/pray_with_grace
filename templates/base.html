@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRAY WITH GRACE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  </head>
+  <body>
+    <h1 id="pwg">PRAY WITH GRACE</h1>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light flex-row">
+        <a class="navbar-brand" href="/"
+          >PWG</a
+        >
+      </nav>
+      <div class="content">
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+      </body>
+    </html>
+    <!-- <h5>{% if request.session.user_id %}Welcome, {{request.session.first_name}}!</h5> | <a href="{% url 'dojoreads:my_index' %}"> Home</a> | <a href="{% url 'dojoreads:my_add_book' %}"> Add Book and Review</a> | 
+    <a href="{% url 'login:my_logout' %}"> Log Out</a>{% endif %} -->

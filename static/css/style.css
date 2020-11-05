@@ -1,0 +1,18 @@
+* {
+    margin : 0;
+    padding : 0;
+    border: 1px dotted pink;
+}
+
+body {
+    font-family: sans-serif ;
+    background-color: #EEEEEE;
+}
+h1#pwg {
+    text-align: center;
+    padding: 20px;
+}
+
+h3.greeting {
+    text-align: center;
+}
