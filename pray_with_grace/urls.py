@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('admin/docs/', include('django.contrib.admindocs.urls')),
+    path('prayers/', include('prayers_app.urls', namespace="prayers")),
+    path('users/', include('users_app.urls', namespace="users"))
 ]
