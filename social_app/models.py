@@ -22,9 +22,11 @@ class Prayer(models.Model):
     description = models.TextField()
     active = models.BooleanField(default=True)
     requested_by = models.ForeignKey(
-        User, related_name="prayers", on_delete=models.CASCADE)
-    prayers_from = models.ManyToManyField(User, related_name="praying_for")
+        User, related_name="requested_prayers", on_delete=models.CASCADE)
+    people_praying_for_this = models.ManyToManyField(
+        User, related_name="prayers_people_are_praying_for")
     categories = models.ManyToManyField(Category, related_name="prayers")
+    tags = models.ManyToManyField(Tag, related_name="prayers")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
