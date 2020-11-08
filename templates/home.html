@@ -1,11 +1,10 @@
-{% extends "base.html" %}
-{% block content %}
-{% load socialaccount %}
+{% extends "base.html" %} {% block content %} {% load socialaccount %}
+<div></div>
+{% if user.is_authenticated %}
+<h3 class="greeting">Welcome, {{ user.username }} !</h3>
 
-    {% if user.is_authenticated %}
-    <h3 class="greeting">Welcome, {{ user.username }} !</h3>
-
-    {% else %}
-    <a href="{% provider_login_url 'google' %}">Login with Google</a>
-    {% endif %}
-    {% endblock %}
+{% else %}
+<a class="google" href="{% provider_login_url 'google' %}">Login with Google</a>
+{% endif %}
+<div></div>
+{% endblock %}

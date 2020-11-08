@@ -20,10 +20,10 @@
   </head>
   <body>
     <header>
-      <div class="empty"></div>
+      <div class="empty"><img src="{% static 'img/gracelogo.png' %}" /></div>
       <div id="pwg">
         <h1>PRAY WITH GRACE</h1>
-        <p><span>Come for the healing</span> ~ Stay for the connections</p>
+        <p><span>Come for the healing</span> ~ Stay for the connection</p>
       </div>
       {% if user.is_authenticated %}
       <div><a href="#">My Profile</a> / <a href="#">Logout</a></div>
@@ -38,7 +38,6 @@
         class="collapse navbar-collapse d-flex justify-content-center"
         id="navbarNav"
       >
-        <a class="navbar-brand" href="#">PWG</a>
         <a class="nav-link text-muted all-caps" href="#">My Requests</a>
         <a class="nav-link text-muted all-caps" href="#">GG Members</a>
         <a class="nav-link text-muted all-caps" href="#">GG Requests</a>
