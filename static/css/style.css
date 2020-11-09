@@ -17,15 +17,15 @@ header {
     color: white;
 }
 header a {
-    color: white;
+    /* color: white;
     letter-spacing: 0.1em;
-    padding: 10px;
+    padding: 10px; */
 }
 header a:hover {
-    color: #85AE9A;
+    /* color: #85AE9A;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 5px;
+    border-radius: 5px; */
 }
 #pwg {
     padding: 0;
@@ -52,9 +52,18 @@ header a:hover {
     height: 100px;
     margin-right: 80px;
 }
-.signin {
+.signin a{
     padding: 10px;
     font-size: 10pt;
+    color: white;
+    letter-spacing: 0.1em;
+    padding: 10px;
+}
+.signin a:hover {
+    color: #85AE9A;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
 }
 h3.greeting {
     text-align: center;

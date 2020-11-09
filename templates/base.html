@@ -20,7 +20,11 @@
   </head>
   <body>
     <header>
-      <div class="empty"><img src="{% static 'img/gracelogo.png' %}" /></div>
+      <div class="empty">
+        <a href="{% url 'home' %}"
+          ><img src="{% static 'img/gracelogo.png' %}"
+        /></a>
+      </div>
       <div id="pwg">
         <h1>PRAY WITH GRACE</h1>
         <p><span>Come for the healing</span> ~ Stay for the connection</p>
@@ -47,7 +51,11 @@
         class="collapse navbar-collapse d-flex justify-content-center"
         id="navbarNav"
       >
-        <a class="nav-link text-muted all-caps" href="#">My Requests</a>
+        <a
+          class="nav-link text-muted all-caps"
+          href="{% url 'prayers:new_prayer' %}"
+          >My Requests</a
+        >
         <a class="nav-link text-muted all-caps" href="#">GG Members</a>
         <a class="nav-link text-muted all-caps" href="#">GG Requests</a>
         <a class="nav-link text-muted all-caps" href="#">I Pray For...</a>
