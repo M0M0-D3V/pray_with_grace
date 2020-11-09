@@ -1,17 +1,12 @@
-{% extends "base.html" %}
-{% block content %}
-{% load socialaccount %}
-
-    {% if user.is_authenticated %}
-    <h3 class="greeting">Welcome, {{ user.username }} !</h3>
-    <form class="" action="/register" method="post">
-        {% csrf_token %}
-        {{ regForm.as_p }}
-        <!--  ".as_p" is an example of an option you can attach to the form inputs
+{% extends "base.html" %} {% block content %} {% load socialaccount %} {% if
+user.is_authenticated %}
+<h3 class="greeting">Welcome, {{ user.username }} !</h3>
+<form class="" action="{% url 'prayers:create' %}" method="post">
+  {% csrf_token %} {{ prayerForm.as_p }}
+  <!--  ".as_p" is an example of an option you can attach to the form inputs
         "as_table" and "as_ul" are a few others...-->
-        <input type="submit" value="register">
-      </form>
-    {% else %}
-    <a href="{% provider_login_url 'google' %}">Login with Google</a>
-    {% endif %}
-    {% endblock %}
+  <input type="submit" value="register" />
+</form>
+{% else %}
+<a href="{% provider_login_url 'google' %}">Login with Google</a>
+{% endif %} {% endblock %}

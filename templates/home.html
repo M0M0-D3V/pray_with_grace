@@ -1,10 +1,56 @@
 {% extends "base.html" %} {% block content %} {% load socialaccount %}
 <div></div>
-{% if user.is_authenticated %}
-<h3 class="greeting">Welcome, {{ user.username }} !</h3>
-
-{% else %}
-<a class="google" href="{% provider_login_url 'google' %}">Login with Google</a>
-{% endif %}
+{% load static %}
 <div></div>
+
+{% if user.is_authenticated %}
+<!-- <h3 class="greeting">Welcome, {{ user.username }} !</h3> -->
+
+{% endif %}
+
+<div class="container welcome">
+  <h1 class="welcomeh1">Relationships are central to being a Christian</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+        When we commit our lives to the glory of Christ, we immediately become a
+        part of His family. Scripture describes God’s people as a body, where
+        each member is essential to the well-being of the whole. We need one
+        another.
+      </p>
+      <p>
+        However, as churches have become larger, maintaining essential
+        relationships has become increasingly difficult. As a result, smaller
+        groups become important. In every church, there are naturally occurring
+        relationships.
+      </p>
+      <p>
+        But there are also intentional small groups that are formed. These
+        intentional groups are what we have chosen to call “Grace Groups”. In
+        our groups, we seek to encourage one another to be faithful to the Lord
+        until He returns for us.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p>
+        This exhortation is at the heart of our Grace Group ministry. It is our
+        desire that each member of a group seek to faithfully live this out in
+        the context of their intentional community. Our goals for our Grace
+        Groups seek to bring glory to God through relationships, character
+        transformation and mission by applying the Bible to our lives.
+      </p>
+      <p>
+        Grace Groups are designed to be intergenerational, so that students,
+        young families, and mature believers can interact together on a
+        consistent basis.
+      </p>
+      <p>
+        If you would like to join a Grace Group, please fill out the Grace Group
+        Registration form below or at the Welcome Center in the lobby. It may
+        take a few weeks for registration to be processed. After it has been
+        processed, you will be contacted by a Grace Group leader.
+      </p>
+    </div>
+  </div>
+</div>
 {% endblock %}

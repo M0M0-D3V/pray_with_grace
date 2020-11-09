@@ -10,3 +10,7 @@ def new_prayer(request):
         "prayerForm": form
     }
     return render(request, "new_prayer.html", context)
+
+
+def create(request):
+    pass

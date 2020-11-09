@@ -26,9 +26,18 @@
         <p><span>Come for the healing</span> ~ Stay for the connection</p>
       </div>
       {% if user.is_authenticated %}
-      <div><a href="#">My Profile</a> / <a href="#">Logout</a></div>
+      <div class="signin">
+        <a href="#">My Profile</a> /
+        <a href="{% url 'account_logout' %}">Logout</a>
+      </div>
       {% else %}
-      <div><a href="#">Sign In</a> / <a href="#">Register</a></div>
+      <div class="signin">
+        <a href="#">Sign In</a> / <a href="#">Register</a> / <br /><a
+          class="google"
+          href="{% provider_login_url 'google' %}"
+          >Login with Google</a
+        >
+      </div>
       {% endif %}
     </header>
     {% if user.is_authenticated %}
