@@ -1,6 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 # Create your models here.
+
+# basic validator
+
+
+def basic_validator(value):
+    if len(value) < 3:
+        raise ValidationError(
+            f'{value} must be longer than 2 characters')
 
 
 class Category(models.Model):
@@ -18,7 +27,7 @@ class Tag(models.Model):
 
 
 class Prayer(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, validators=[basic_validator])
     description = models.TextField()
     active = models.BooleanField(default=True)
     requested_by = models.ForeignKey(

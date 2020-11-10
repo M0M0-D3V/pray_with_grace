@@ -1,16 +1,40 @@
 {% extends "base.html" %} {% block content %} {% load socialaccount %}
-<div></div>
-{% if user.is_authenticated %}
-<form class="" action="{% url 'prayers:create' %}" method="post">
-  {% csrf_token %}
-  <div></div>
-  {{ prayerForm.as_p }}
-  <!--  ".as_p" is an example of an option you can attach to the form inputs
-        "as_table" and "as_ul" are a few others...-->
-  <input type="submit" value="register" />
-</form>
-{% else %}
-<a href="{% provider_login_url 'google' %}">Login with Google</a>
-{% endif %}
-<div></div>
+<div class="row">{% if user.is_authenticated %}</div>
+<div class="row">
+  <div class="col-md-6">
+    <table
+      class="table table-bordered table-light table-striped table-sm table-hover"
+    >
+      <thead class="thead-light">
+        <th>Date</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th># People Praying</th>
+      </thead>
+      <tbody>
+        {% for prayer in all_my_prayers %}
+        <tr>
+          <td>{{prayer.created_at}}</td>
+          <td>{{prayer.title}}</td>
+          <td>{{prayer.description}}</td>
+          <td>{{prayer.people_praying_for_this|length}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <form action="{% url 'prayers:create' %}" method="post">
+      {% csrf_token %}
+      <div></div>
+      {{ prayerForm.as_p }}
+      <!--  ".as_p" is an example of an option you can attach to the form inputs
+      "as_table" and "as_ul" are a few others...s-->
+      <input type="submit" value="Send Prayer Request" />
+    </form>
+    {% else %}
+    <a href="{% provider_login_url 'google' %}">Login with Google</a>
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
