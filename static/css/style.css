@@ -1,7 +1,7 @@
 * {
     margin : 0;
     padding : 0;
-    /* border: 1px dotted pink; */
+    border: 1px dotted pink;
 }
 
 body {
@@ -100,4 +100,7 @@ h1.welcomeh1 {
     color: #0C3B5D;
     margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
+}
+h3.prayerhe {
+    margin-top: 20px;
 }

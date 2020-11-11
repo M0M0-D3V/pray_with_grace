@@ -2,6 +2,7 @@
 <div class="row">{% if user.is_authenticated %}</div>
 <div class="row">
   <div class="col-md-6">
+    <h3 class="prayerh3">My current prayer requests...</h3>
     <table
       class="table table-bordered table-light table-striped table-sm table-hover"
     >
@@ -10,6 +11,7 @@
         <th>Title</th>
         <th>Description</th>
         <th># People Praying</th>
+        <th>Actions</th>
       </thead>
       <tbody>
         {% for prayer in all_my_prayers %}
@@ -18,12 +20,14 @@
           <td>{{prayer.title}}</td>
           <td>{{prayer.description}}</td>
           <td>{{prayer.people_praying_for_this|length}}</td>
+          <td>Edit | Delete | Complete</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
   <div class="col-md-6">
+    <h3 class="prayerh3">Make a new prayer request...</h3>
     <form action="{% url 'prayers:create' %}" method="post">
       {% csrf_token %}
       <div></div>
