@@ -5,28 +5,29 @@
   {% if user.is_authenticated %}
 
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 allrequests">
       <h3 class="prayerh3">My current prayer requests...</h3>
       <!-- CARD THING AMA BOBBER -->
       <div class="cardcontainer">
         {% for prayer in all_my_prayers %}
-        <div class="animcard">
+        <div class="animcard" onclick="cardDisplay()">
           <h3 class="title">{{prayer.title}}</h3>
           <div class="bar">
             <div class="emptybar"></div>
             <div class="filledbar"></div>
+            <div class="cardbody">{{prayer.created_at}}</div>
           </div>
-          <div class="circle">
+          <!-- <div class="circle">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
               <circle class="stroke" cx="60" cy="60" r="50" />
             </svg>
-          </div>
+          </div> -->
         </div>
         {% endfor %}
       </div>
       <!-- END CARD THING AMA BOBBER -->
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 requestform">
       <h3 class="prayerh3">Make a new prayer request...</h3>
       <form action="{% url 'prayers:create' %}" method="post">
         {% csrf_token %}
@@ -34,7 +35,10 @@
         {{ prayerForm.as_p }}
         <!--  ".as_p" is an example of an option you can attach to the form inputs
         "as_table" and "as_ul" are a few others...s-->
-        <button type="submit" class="btn btn-small btn-outline-warning">
+        <button
+          type="submit"
+          class="btn btn-small btn-outline-warning btn-block"
+        >
           Send Prayer Request
         </button>
       </form>

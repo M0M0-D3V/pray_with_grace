@@ -6,6 +6,8 @@
 
 body {
     font-family: sans-serif ;
+    background-color: #0C3B5D;
+
 }
 header {
     text-align: center;
@@ -103,4 +105,20 @@ h1.welcomeh1 {
 }
 h3.prayerh3 {
     margin-top: 20px;
+}
+.allrequests {
+    background-color: #BCCF9B;
+}
+.requestform{
+    background-color: #6C3B5E;
+    background-image: linear-gradient(#6C3B5E 50%, #eeeeee 50%);
+}
+.prayerh3 {
+    color: white;
+}
+form{
+    color: white;
+}
+input, textarea {
+    border-radius: 5px;
 }
