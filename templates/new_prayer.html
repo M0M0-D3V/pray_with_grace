@@ -7,81 +7,23 @@
   <div class="row">
     <div class="col-md-8">
       <h3 class="prayerh3">My current prayer requests...</h3>
-      <table
-        class="table table-bordered table-light table-striped table-sm table-hover"
-      >
-        <thead class="thead-light">
-          <th>Date</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th># People Praying</th>
-          <th>Actions</th>
-        </thead>
-        <tbody>
-          {% for prayer in all_my_prayers %}
-          <tr>
-            <td>{{prayer.created_at}}</td>
-            <td>{{prayer.title}}</td>
-            <td>{{prayer.description}}</td>
-            <td>{{prayer.people_praying_for_this|length}}</td>
-            <td>Edit | Delete | Complete</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <body>
-        <!-- CARD THING AMA BOBBER -->
-        <div class="cardcontainer">
-          <div class="animcard">
-            <h3 class="title">Card 1</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
+      <!-- CARD THING AMA BOBBER -->
+      <div class="cardcontainer">
+        {% for prayer in all_my_prayers %}
+        <div class="animcard">
+          <h3 class="title">{{prayer.title}}</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
           </div>
-          <div class="animcard">
-            <h3 class="title">Card 2</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
-          </div>
-          <div class="animcard">
-            <h3 class="title">Card 3</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
-          </div>
-          <div class="animcard">
-            <h3 class="title">Card 4</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="50" />
+            </svg>
           </div>
         </div>
-      </body>
+        {% endfor %}
+      </div>
       <!-- END CARD THING AMA BOBBER -->
     </div>
     <div class="col-md-4">
@@ -92,7 +34,9 @@
         {{ prayerForm.as_p }}
         <!--  ".as_p" is an example of an option you can attach to the form inputs
         "as_table" and "as_ul" are a few others...s-->
-        <input type="submit" value="Send Prayer Request" />
+        <button type="submit" class="btn btn-small btn-outline-warning">
+          Send Prayer Request
+        </button>
       </form>
       {% else %}
       <a href="{% provider_login_url 'google' %}">Login with Google</a>
