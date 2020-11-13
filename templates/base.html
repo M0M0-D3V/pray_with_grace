@@ -38,7 +38,7 @@
       </div>
       {% if user.is_authenticated %}
       <div class="signin">
-        <a href="#">My Profile</a> /
+        <a href="{% url 'users:profile' %}">My Profile</a> /
         <a href="{% url 'account_logout' %}">Logout</a>
       </div>
       {% else %}
