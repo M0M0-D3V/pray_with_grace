@@ -18,17 +18,6 @@ header {
     align-items: center;
     color: white;
 }
-header a {
-    /* color: white;
-    letter-spacing: 0.1em;
-    padding: 10px; */
-}
-header a:hover {
-    /* color: #85AE9A;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 5px; */
-}
 #pwg {
     padding: 0;
     margin: 0 20px;
@@ -110,6 +99,7 @@ h3.prayerh3 {
     background-color: #BCCF9B;
 }
 .requestform{
+    box-shadow: -1rem 0 3rem darkslategray;
     background-color: #6C3B5E;
     background-image: linear-gradient(#6C3B5E 50%, #eeeeee 50%);
 }
@@ -121,4 +111,9 @@ form{
 }
 input, textarea {
     border-radius: 5px;
+}
+small {
+    font-size: 8pt;
+    color: darkblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

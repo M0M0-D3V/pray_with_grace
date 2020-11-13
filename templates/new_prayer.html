@@ -10,19 +10,24 @@
       <!-- CARD THING AMA BOBBER -->
       <div class="cardcontainer">
         {% for prayer in all_my_prayers %}
-        <div class="animcard" onclick="cardDisplay()">
+        <div class="animcard front">
           <h3 class="title">{{prayer.title}}</h3>
-          <div class="bar">
-            <div class="emptybar"></div>
-            <div class="filledbar"></div>
-            <div class="cardbody">{{prayer.created_at}}</div>
+          <!-- <div class="bar"> -->
+          <!-- <div class="emptybar"></div>
+            <div class="filledbar"></div> -->
+          <div class="cardbody">
+            <small>
+              {{ prayer.created_at|time:"P" }} on
+              <span>{{ prayer.created_at|date:"N j, Y" }}</span>
+            </small>
           </div>
-          <!-- <div class="circle">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <circle class="stroke" cx="60" cy="60" r="50" />
-            </svg>
-          </div> -->
         </div>
+        <!-- <div class="animcard back">
+          <h3 class="title">change</h3>
+          <div class="cardbody">
+            <p>change here</p>
+          </div>
+        </div> -->
         {% endfor %}
       </div>
       <!-- END CARD THING AMA BOBBER -->
