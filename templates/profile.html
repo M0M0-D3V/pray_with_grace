@@ -3,6 +3,10 @@
 {% load static %}
 <div class="container profile">{% if user.is_authenticated %}
     <h3 class="profileh3">yes it works</h3>
+    <div class="row">
+      <div class="left-sidebar col-md-3"><h5>sidebar</h5></div>
+      <div class="right-main col-md-9"><h5>yup</h5></div>
+    </div>
 </div>
 {% else %}
       <a href="{% provider_login_url 'google' %}">Login with Google</a>
