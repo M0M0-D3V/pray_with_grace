@@ -3,23 +3,11 @@
 {% load static %}
 <div class="container profile">{% if user.is_authenticated %}
   <div class="row">
-    <div class="left-sidebar col-md-3"><h5>My Profile</h5>
-    <div class="initialavatar">{{user.first_name.0}}{{user.last_name.0}}</div>
-    <table>
-      <tr>
-        <td><h6>Grace Group:</h6></td>
-        <td><p>{ Placeholder }</p></td>
-      </tr>
-      <tr>
-        <td><h6>Member Since:</h6></td>
-        <td><p>{ Placeholder }{{ user.created_at|date:"N j, Y" }}</p></td>
-      </tr>
-      </thead>
-    </table>
+    <div class="member-left col-md-6"><h5>My Profile</h5>
     </div>
-    <div class="right-main col-md-9">
+    <div class="member-right col-md-6">
     <h3 class="profileh3">yes it works</h3>
-      <h5>yup</h5></div>
+    </div>
     </div>
 </div>
 {% else %}
