@@ -5,4 +5,4 @@ from .models import User, Prayer, Category, Tag
 class PrayerForm(forms.ModelForm):
     class Meta:
         model = Prayer
-        fields = ['title', 'description']
+        fields = ['title', 'description', 'categories']
