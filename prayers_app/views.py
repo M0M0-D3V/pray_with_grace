@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
-from .forms import PrayerForm
+from .forms import PrayerForm, CreateNewPrayer
 from prayers_app.models import Prayer, Category, Tag
 
 # Create your views here.
 
 
 def new_prayer(request):
-    form = PrayerForm()
+    form = CreateNewPrayer()
     context = {
         "prayerForm": form,
         'all_my_prayers': Prayer.objects.filter(requested_by=request.user)
