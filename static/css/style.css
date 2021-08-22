@@ -1,21 +1,29 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px dotted pink;
+  /* border: 1px dotted pink; */
 }
-
+:root {
+  --queen-blue: #436DA0;
+  --spanish-gray: #9F9F9A;
+  --baby-powder: #FFFFF8;
+  --cambridge-blue: #B6CCBB;
+  --china-rose: #AB5F80;
+  --tea-green: #D9E5BD;
+  /* use these variables like this: var(--queen-blue); */
+}
 body {
   font-family: sans-serif;
-  background-color: #0c3b5d;
+  background-color: var(--queen-blue);
 }
 header {
   text-align: center;
   padding: 10px 40px;
-  background-color: #0c3b5d;
+  background-color: var(--queen-blue);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: var(--baby-powder);
 }
 #pwg {
   padding: 0;
@@ -45,14 +53,14 @@ header {
 .signin a {
   padding: 10px;
   font-size: 10pt;
-  color: white;
+  color: var(--baby-powder);
   letter-spacing: 0.1em;
   padding: 10px;
 }
 .signin a:hover {
-  color: #85ae9a;
+  color: var(--cambridge-blue);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--baby-powder);
   border-radius: 5px;
 }
 h3.greeting {
@@ -69,54 +77,55 @@ nav.navbar,
 .navbar-light,
 .bg-light {
   border-radius: 4px;
-  border: 0.75px solid grey;
+  border: 0.75px solid var(--spanish-gray);
   box-shadow: 3px 3px silver;
-  background-color: #eeeeee !important;
+  background-color: var(--baby-powder) !important;
 }
 a.nav-link:hover,
 a.google:hover {
-  background-color: #cccccc;
+  background-color: var(--spanish-gray);
   border-radius: 5px;
+  color: var(--baby-powder) !important;
 }
 a.google {
-  color: white;
+  color: var(--baby-powder);
   text-decoration: none;
   padding: 10px;
   margin: 10px;
 }
 .welcome {
-  background-color: white;
+  background-color: var(--baby-powder);
   font-size: 11.5pt;
-  color: #777777;
+  color: var(--spanish-gray);
 }
 h1.welcomeh1 {
-  color: #0c3b5d;
+  color: var(--queen-blue);
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
 }
 h3.prayerh3,
 h3.profileh3 {
   margin-top: 20px;
-  text-shadow: 2px 2px darkgray;
+  text-shadow: 2px 2px var(--spanish-gray);
 }
 .allrequests,
 .profile {
-  background-color: #bccf9b;
+  background-color: var(--tea-green);
 }
 .requestform {
-  box-shadow: -1rem 0 3rem darkslategray;
-  background-color: #6c3b5e;
-  background-image: linear-gradient(#6c3b5e 50%, #eeeeee 50%);
+  box-shadow: -1rem 0 3rem var(--queen-blue);
+  background-color: var(--china-rose);
+  background-image: linear-gradient(var(--china-rose) 50%, var(--spanish-gray) 50%);
 }
 .profile {
   padding: 40px;
 }
 .prayerh3,
 .profileh3 {
-  color: white;
+  color: var(--baby-powder);
 }
 form {
-  color: white;
+  color: var(--baby-powder);
 }
 input,
 textarea {
@@ -124,24 +133,24 @@ textarea {
 }
 small {
   font-size: 8pt;
-  color: darkblue;
+  color: var(--queen-blue);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .left-sidebar {
   /* margin-top: 20px; */
   height: fit-content;
-  background-color: #85ae9a;
+  background-color: var(--cambridge-blue);
   border-radius: 10px;
-  border: 2px dashed gray;
-  box-shadow: 2px 2px darkgray;
+  border: 2px dashed var(--spanish-gray);
+  box-shadow: 2px 2px var(--spanish-gray);
 }
 .left-sidebar > h5,
 h6,
 .right-main h5 {
-  color: white;
+  color: var(--baby-powder);
   padding: 10px;
   /* text-align: center; */
-  text-shadow: 2px 2px gray;
+  text-shadow: 2px 2px var(--spanish-gray);
 }
 .initialavatar {
   margin: 20px auto;
@@ -149,22 +158,22 @@ h6,
   border-radius: 50%;
   width: fit-content;
   padding: 20px;
-  color: #6c3b5e;
-  background-color: white;
-  border: 2px dotted darkgray;
+  color: var(--china-rose);
+  background-color: var(--baby-powder);
+  border: 2px dotted var(--spanish-gray);
   text-shadow: 2px 2px lightyellow;
 }
 .left-sidebar table {
   margin: 0 auto;
 }
 .right-main {
-  background-color: white;
+  background-color: var(--baby-powder);
 }
 .todolist {
   padding: 40px;
   margin: 20px auto;
-  background-color: darkgray;
-  box-shadow: 2px 2px white;
+  background-color: var(--spanish-gray);
+  box-shadow: 2px 2px var(--baby-powder);
   border-radius: 10px;
 }
 .todolist ul {
@@ -176,12 +185,12 @@ h6,
 }
 .todolist ul li {
   border: none;
-  border-bottom: 1px dashed maroon;
+  border-bottom: 1px dashed var(--china-rose);
   margin-left: 30px;
 }
 .todolist h2,
 .todolist h4,
 .todolist p {
-  color: white;
+  color: var(--baby-powder);
   text-shadow: 2px 2px #222;
 }

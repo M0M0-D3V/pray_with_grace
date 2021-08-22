@@ -169,3 +169,6 @@ ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
 # or any other page
 
 # redirects to profile page if not configured
+
+# AUTO FIELD 3.1 to 3.2
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
