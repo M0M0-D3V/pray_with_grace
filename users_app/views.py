@@ -18,3 +18,11 @@ def members(request):
         'all_members': users
     }
     return render(request, "members.html", context)
+
+def login(request):
+    pass
+
+def register(request):
+    pass
+def logout(request):
+    pass
